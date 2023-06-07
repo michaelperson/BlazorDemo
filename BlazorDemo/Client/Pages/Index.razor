@@ -6,4 +6,12 @@
 
 Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" Nom="Mike" />
+<label class="form-label">Votre nom</label>
+<input type="text" @bind="@Nom" /> <!-- Je fais en sorte que la value de mon textbox = Nom + modification automatique de cette variable sur le onChange-->
+<label>@Nom</label>
+<SurveyPrompt Title="How is Blazor working for you?" Nom="@Nom" />
+
+@code
+{
+    private string Nom { get; set; } = "Bernard";
+}
