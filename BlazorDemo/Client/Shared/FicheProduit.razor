@@ -1,0 +1,16 @@
+﻿
+<div class="card w-25">
+    <div class="card-body">
+        <label>Nom</label> : @Produit.Name
+
+        <label>Description</label> : @Produit.Description
+
+        <h1>@Produit.Price €</h1>
+    </div>
+</div>
+
+@code {
+    [EditorRequired] /*Le paramètre est obligatoire lors de l'appel du component sous pein d'avoir un warning*/
+    [Parameter] /*Définir en In et Out notre paramètre*/
+    public Product Produit { get; set; }
+}
